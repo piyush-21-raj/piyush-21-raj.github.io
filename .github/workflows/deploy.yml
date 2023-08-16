@@ -36,11 +36,7 @@ jobs:
       run: |
         git config --global user.email "piyushraj2k03@gmail.com"
         git config --global user.name "Piyush Raj"
-
-    - name: Fix Permissions 🔑
-      run: |
-        chmod a+x bin/*
-        git commit -am "fix permissions to bin/deploy "
+        
     - name: Deploy 🚀
       if: github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@v4
